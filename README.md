@@ -2,6 +2,8 @@
 
 Minimal FastAPI backend (uv project) for personalized LinkedIn post generation using per-user Persona Cards, exemplar retrieval, and a simple two-step generation + critique pipeline.
 
+For a deeper, team-focused guide covering architecture, LLM details, embeddings, streaming, and operations, see GUIDE.md.
+
 This is a skeleton you can run locally and extend. It supports:
 - Creating/updating a Persona Card per user from samples + preferences
 - Storing writing samples and building a simple vector index per user
