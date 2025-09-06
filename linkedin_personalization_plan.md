@@ -1,5 +1,3 @@
-Great challenge. Here’s a concrete, end‑to‑end plan to generate distinctive, on‑brand LinkedIn posts per user — not generic AI slop — plus how to level it up with training/tuning on your 3090.
-
 **Core Approach**
 - Personalize via “Persona Cards”: Extract writing style from the user’s past posts, preferences, and explicit sliders. Use this as structured context per request.
 - Retrieve style exemplars: Pull 2–4 snippets of their own writing for few‑shot conditioning.
@@ -95,18 +93,18 @@ Feasibility on 3090:
 - User: Topic, audience, goal, CTA, optional seed story; desired hook type(s).
 
 **MVP → V1 Roadmap**
-- MVP (1–2 weeks): Onboarding wizard, Persona Card, exemplar retrieval, generation + critique + rerank, feedback capture, export/copy.
+- MVP : Onboarding wizard, Persona Card, exemplar retrieval, generation + critique + rerank, feedback capture, export/copy.
 - V1: Scheduler, multi‑variant A/B, per‑user banned list UI, analytics for style drift, optional LinkedIn posting.
 - V2: Style archetype adapters (QLoRA), ORPO preference tuning, user micro‑adapters for heavy users, image assistant.
 
-**Stack on Your Machine**
+**Stack on Local Machine**
 - Serve model: vLLM with Llama‑3.1‑8B‑Instruct or Qwen2.5‑7B‑Instruct.
 - Embeddings: `bge-m3` or `e5-large-v2` via sentence‑transformers.
 - Vector store: Qdrant (Docker) or FAISS local.
 - API: FastAPI; workers via Celery/RQ for async drafting; Redis cache.
 - Frontend: Next.js; Tailwind; file upload for samples; live preview.
 
-**Next Steps (I can implement)**
+**Next Steps**
 - Define Persona Card schema + banned‑phrase list; build onboarding wizard.
 - Implement retrieval + planning + draft + critique + rerank pipeline.
 - Add feedback loop and persona auto‑updates.
