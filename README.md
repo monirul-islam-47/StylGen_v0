@@ -98,4 +98,4 @@ curl -X POST "$OLLAMA_BASE/api/pull" -d '{"name": "llama3:8b"}'
 - `/generate` now returns a `generation_id` along with `chosen` and `variants`, which you can pass to `/feedback`.
 
 ## License
-Proprietary / internal. Do not distribute.
+This is a one night project. Feel free to do whatever you want.

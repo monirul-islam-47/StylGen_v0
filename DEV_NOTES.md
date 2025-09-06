@@ -9,9 +9,4 @@
 - Auth & CORS: add basic auth and CORS middleware for frontend integration.
 - Tests: add unit tests for persona builder, scoring, and pipeline orchestration.
 
-```
-To add the Makefile later:
-  1) Create stylgen_v0/Makefile with the exact content above.
-  2) Use: make sync; make run; make pull-ollama OLLAMA_MODEL=llama3:8b
-```
 
